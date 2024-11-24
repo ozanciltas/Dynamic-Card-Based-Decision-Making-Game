@@ -81,9 +81,8 @@ We aim to enhance the game with:
 
 ## ScreenShots
 
-![Image Sequence_019_0000](https://github.com/user-attachments/assets/e8ac0324-465b-4ebf-9ca9-2490dc47590f)
+![Image Sequence_019_0000](https://github.com/user-attachments/assets/7f8cc0a5-ab0d-4bba-aec1-31dcbf2fd3b3)
 
-
-![Image Sequence_020_0000](https://github.com/user-attachments/assets/d2e2115f-643e-4b63-8a4c-8ed54bcbb123)
+![Image Sequence_020_0000](https://github.com/user-attachments/assets/098e8818-1758-4f14-8f54-a136f8008d74)
 
 
