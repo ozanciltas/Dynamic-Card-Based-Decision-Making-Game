@@ -1,84 +1,112 @@
-# Kingdom Game  
+# Dynamic Card-Based Decision-Making Game  
 
-**Kingdom Game** is a strategic decision-making game where players rule over a kingdom and must balance resources to maintain power. Inspired by the core mechanics of *Reigns*, this game offers unique settings and AI-generated events to challenge your leadership skills.  
+Dynamic Card-Based Decision-Making Game is an interactive Unity project that combines strategic decision-making and dynamic scenario generation. Players swipe cards left or right to make decisions, affecting the game's resources and narrative progression. The project integrates external API data to generate scenarios tailored to player profiles, offering a unique and replayable experience.  
 
 ---
 
 ## Features  
 
-### Choose Your Realm  
-Start your journey by selecting one of four distinct settings:  
-- **Viking:** Brave the harsh northern seas and deal with raiders and gods.  
-- **Desert:** Rule a land of endless sand, oases, and ancient secrets.  
-- **Kingdom:** Classic medieval governance with knights, castles, and court politics.  
-- **Samurai:** Lead with honor in a feudal world of samurai, shoguns, and ancient traditions.  
+- **Dynamic Scenario Generation:**  
+  Uses an external API to fetch personalized scenarios based on player profiles.  
 
-### Dynamic AI-Generated Events  
-Every decision in **Kingdom Game** is shaped by dynamically generated events powered by AI.  
-- **Context-Aware Events:** The AI tailors events to your chosen setting, ensuring a unique and immersive experience.  
-- **Unpredictable Outcomes:** Decisions can have immediate, delayed, or cascading effects on your resources, adding depth to the gameplay.  
-- **Adaptive Challenges:** As the game progresses, the AI introduces events that align with your current resource state, keeping you on your toes.  
+- **Card Swipe Mechanics:**  
+  Players interact with cards by swiping, triggering various in-game effects.  
 
-### Manage Your Kingdom  
-Keep track of four critical resources:  
-- **Army:** Protect your kingdom from external threats.  
-- **People:** Maintain the happiness and loyalty of your subjects.  
-- **Church:** Balance faith and political power.  
-- **Wealth:** Grow and sustain your treasury.  
+- **Resource Management:**  
+  Game outcomes are influenced by resource changes, creating a balance between strategy and risk.  
 
-The game ends if any resource reaches its maximum or minimum value, so balance is the key to survival.  
+- **Responsive UI:**  
+  Built with Unity's TextMesh Pro for high-quality, adaptable user interfaces.  
 
-### Decision-Based Gameplay  
-- Each event presents a dilemma with two possible choices.  
-- Every decision has consequences, impacting your kingdom's resources and overall stability.  
+- **Replayability:**  
+  Randomized effects and dynamic storylines make every playthrough unique.  
 
-### Endless Replayability  
-- The combination of AI-generated events and diverse settings ensures that no two playthroughs are the same.  
-- Experiment with different strategies to see how long your rule can last.  
+- **Optimized Performance:**  
+  Ensures smooth gameplay even with dynamic content updates.  
 
 ---
 
-## How to Play  
+## Tech Stack  
 
-1. **Select Your Setting:**  
-   At the start of the game, choose one of the four available settings.  
-
-2. **Make Decisions:**  
-   Read each event carefully and select one of the two available choices.  
-   AI will adjust the events based on your resources and decisions.  
-
-3. **Survive and Thrive:**  
-   Try to maintain your kingdom's stability for as long as possible.  
-   The game ends if any resource reaches its extreme (maximum or minimum).  
+- **Game Engine:** Unity (Version X.X)  
+- **Programming Language:** C#  
+- **API Integration:** RESTful API with JSON parsing  
+- **UI Framework:** Unity UI, TextMesh Pro  
+- **Version Control:** Git  
+- **Platform:** Cross-platform (Windows, macOS, WebGL)  
 
 ---
 
-## Development  
+## Gameplay  
 
-- **Engine:** Unity  
-- **Language:** C#  
-
-**Kingdom Game** leverages AI to dynamically generate events, creating a strategic experience where no two playthroughs are alike.  
+Players make decisions by swiping cards left or right. Each decision affects the game's resources, represented by visual indicators, and progresses the narrative. Players must strategically balance resource consumption to achieve success.  
 
 ---
 
-## Future Features  
+## Core Components  
 
-We aim to enhance the game with:  
-- Additional AI-driven events and scenarios for each setting.  
-- Interactive animations and sound effects tailored to the chosen realm.  
-- New resource types for deeper strategy.  
+### APIManager  
+Handles API integration for dynamic scenario generation.  
+- **Responsibilities:**  
+  - Fetch scenarios based on player profiles.  
+  - Parse JSON responses into usable game data.  
+  - Update the UI with scenario details.  
+- **Key Methods:**  
+  - `GetScenarioFromAPI`: Fetches and processes scenarios.  
+  - `ExtractScenarioResponse`: Parses API responses into usable data.  
+- **Technologies:** REST API, JSON parsing  
+
+### CardSwipe  
+Manages the card swipe mechanic, which is the core of the gameplay.  
+- **Responsibilities:**  
+  - Detect swipe direction and apply appropriate effects.  
+  - Update resources and initiate new scenarios.  
+- **Key Methods:**  
+  - `OnBeginDrag`, `OnDrag`, `OnEndDrag`: Handle swipe gestures.  
+  - `ApplyEffects`: Updates resource values based on decisions.  
+
+### GameManager  
+Controls the overall game flow, including start, restart, and game-over scenarios.  
+- **Responsibilities:**  
+  - Manage UI transitions between screens.  
+  - Monitor resource depletion to determine game-over conditions.  
+- **Key Methods:**  
+  - `StartGame`: Initializes the game and fetches the first scenario.  
+  - `EndGame`: Displays the end screen and resource status.  
+
+### InputManager  
+Handles player input using Unity's new Input System.  
+- **Responsibilities:**  
+  - Detect player interactions (e.g., swipes, clicks).  
+  - Pass input data to other game components.  
+- **Key Methods:**  
+  - `Touch`: Processes touch or click inputs.  
 
 ---
 
-## Installation  
+## Challenges & Solutions  
 
-1. Clone or download the repository.  
-2. Open the project in Unity.  
-3. Build and run the game on your desired platform.  
+- **API Integration:**  
+  - **Challenge:** Synchronizing data from the external API with in-game logic.  
+  - **Solution:** Developed robust JSON parsing and added error handling for API failures.  
+
+- **Performance Optimization:**  
+  - **Challenge:** Maintaining smooth performance with dynamic content updates.  
+  - **Solution:** Optimized card rendering and resource indicator updates.  
+
+- **User Feedback:**  
+  - **Challenge:** Balancing difficulty and intuitiveness.  
+  - **Solution:** Collected feedback from playtesters and iteratively improved UI and mechanics.  
 
 ---
 
+## How to Run  
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/username/project-name.git  
+
+---
 ## ScreenShots
 
 ![Image Sequence_019_0000](https://github.com/user-attachments/assets/7f8cc0a5-ab0d-4bba-aec1-31dcbf2fd3b3)
