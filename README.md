@@ -3,6 +3,13 @@
 Dynamic Card-Based Decision-Making Game is an interactive Unity project that combines strategic decision-making and dynamic scenario generation. Players swipe cards left or right to make decisions, affecting the game's resources and narrative progression. The project integrates external API data to generate scenarios tailored to player profiles, offering a unique and replayable experience.  
 
 ---
+## ScreenShots
+
+![Image Sequence_019_0000](https://github.com/user-attachments/assets/7f8cc0a5-ab0d-4bba-aec1-31dcbf2fd3b3)
+
+![Image Sequence_020_0000](https://github.com/user-attachments/assets/098e8818-1758-4f14-8f54-a136f8008d74)
+
+---
 
 ## Features  
 
@@ -107,10 +114,6 @@ Handles player input using Unity's new Input System.
    git clone https://github.com/username/project-name.git  
 
 ---
-## ScreenShots
 
-![Image Sequence_019_0000](https://github.com/user-attachments/assets/7f8cc0a5-ab0d-4bba-aec1-31dcbf2fd3b3)
-
-![Image Sequence_020_0000](https://github.com/user-attachments/assets/098e8818-1758-4f14-8f54-a136f8008d74)
 
 
